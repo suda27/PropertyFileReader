@@ -6,14 +6,5 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-	<bean id="messageSource"
-		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basename" value="employee"></property>
-	</bean>
-	<bean id="applicationUser" class="autowire.ApplicationUser">
-		<property name="name" value="Sudarsan"></property>
-	</bean>
-
-	<bean id="application" class="autowire.Application" autowire="constructor">
-	</bean>
+	<context:component-scan base-package="qualifier" />
 </beans>
